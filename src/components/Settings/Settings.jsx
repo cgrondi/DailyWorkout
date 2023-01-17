@@ -4,7 +4,7 @@ import Select from "react-select";
 
 
 
-function Settings(){
+function Settings(props){
     const difficultyOptions = [
         { value: 'beginner', label: 'Beginner' },
         { value: 'intermedieate', label: 'Intermediate' },

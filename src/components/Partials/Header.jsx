@@ -1,11 +1,25 @@
 import React from "react";
 
-function Header(){
+function Header(props){
     return(
         <div>
-            <nav className="navbar navbar-light bg-light">
-                <a className="navbar-brand" href="#">Daily Workout</a>
-            </nav>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <h1 className="navbar-brand">Daily Workout</h1>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav">
+                    <button className="btn btn-primary float-right" onClick={props.changePage}>
+                        {props.currentlySettings ? "Home" : "Settings"}
+                    </button>
+                    
+                    
+                    
+                     
+                    </div>
+                </div>
+                </nav>
         </div>
     )
 }
