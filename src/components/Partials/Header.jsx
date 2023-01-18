@@ -13,10 +13,6 @@ function Header(props){
                     <button className="btn btn-primary float-right" onClick={props.changePage}>
                         {props.currentlySettings ? "Home" : "Settings"}
                     </button>
-                    
-                    
-                    
-                     
                     </div>
                 </div>
                 </nav>

@@ -9,7 +9,7 @@ function ExerciseCard(props){
     return( 
         <div className="card" style={style}>
             <h5 className="card-header">
-                EXERCISE 
+                {props.info.name} 
                 <input className="form-check-input" type="checkbox" value="" style={{float: "right", marginLeft:"1%"}}/>
                 <label className="form-check-label" htmlFor="flexCheckDefault" style={{float: "right"}}>
                     Finished
@@ -22,7 +22,5 @@ function ExerciseCard(props){
             </div>
         </div>)
 }
-
-//https://api-ninjas.com/api/exercises
 
 export default ExerciseCard;

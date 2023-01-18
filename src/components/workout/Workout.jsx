@@ -1,6 +1,10 @@
 import React from "react";
 import CardHolder from "./CardHolder";
+import randomizedArray from "../../workouts";
 
+function createCard(workout){
+    return <CardHolder workout={workout} key={workout.key}/>
+}
 
 function Workout(){
     
@@ -10,9 +14,7 @@ function Workout(){
     return <div>
         <h1>Today's Workout</h1>
         <h3>{day}: MUSCLE1, MUSCLE2, MUSCLE3</h3>
-        <CardHolder />
-        <CardHolder />
-        
+        {randomizedArray.map(createCard)}
     </div>
 }
 
