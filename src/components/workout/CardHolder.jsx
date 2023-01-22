@@ -12,7 +12,9 @@ function CardHolder(props){
 
     return( 
         <div>
-            {needInfo ? <InfoCard toggleNeedInfo={toggleNeedInfo} info={props.workout}/> : <ExerciseCard toggleNeedInfo={toggleNeedInfo} info={props.workout}/>}
+            {needInfo ? 
+                <InfoCard toggleNeedInfo={toggleNeedInfo} info={props.workout}/> : 
+                <ExerciseCard toggleNeedInfo={toggleNeedInfo} info={props.workout}/>}
         </div>
         )
 }

@@ -17,6 +17,7 @@ function ExerciseCard(props){
             </h5>
             
             <div className="card-body">
+                <p>{props.info.muscle}</p>
                 <p className="card-text">X sets of Y reps</p>
                 <button className="btn btn-info" style={{float: "right"}} onClick={props.toggleNeedInfo}>Info</button>
             </div>

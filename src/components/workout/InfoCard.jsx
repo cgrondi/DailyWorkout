@@ -13,8 +13,8 @@ function InfoCard(props){
                 <div className="card-body">
                     <p>Exercise name: {props.info.name}</p>
                     <p>EXERCISE TYPE: {props.info.type}</p>
-                    <p>MUSCLE TARGETED: {props.info.muscle}</p>
-                    <p>EQUIPMENT: {props.info.equipment}</p>
+                    <p>MUSCLE TARGETED: {props.info.muscle.replace("_", " ")}</p>
+                    <p>EQUIPMENT: {props.info.equipment.split('_').join(' ')}</p>
                     <p>INSTRUCTIONS: {props.info.instructions}</p>
                     <button className="btn btn-info" style={{float: "right"}} onClick={props.toggleNeedInfo}>Back</button>
                 </div>

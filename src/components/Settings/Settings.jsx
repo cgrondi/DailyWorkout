@@ -11,7 +11,7 @@ var settingsValues = {
             Two: "chest",
             Three: "triceps"
         },
-        Teusday: {
+        Tuesday: {
             One: "abdominals",
             Two: "abductors",
             Three: "neck"
@@ -30,6 +30,16 @@ var settingsValues = {
             One: "forearms",
             Two: "quadriceps",
             Three: "traps"
+        },
+        Saturday: {
+            One: "",
+            Two: "",
+            Three: ""
+        },
+        Sunday: {
+            One: "None",
+            Two: "day of rest",
+            Three: "take a break"
         }
     }
 }
@@ -51,7 +61,7 @@ function Settings(props){
                 Two: "chest",
                 Three: "triceps"
             },
-            Teusday: {
+            Tuesday: {
                 One: "abdominals",
                 Two: "abductors",
                 Three: "neck"
