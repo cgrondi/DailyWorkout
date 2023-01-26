@@ -8,11 +8,6 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.json('hi');
-})
-
-
 app.get('/workouts/:first', (req, res) => {
     const options = {
         method: 'GET',
@@ -23,9 +18,5 @@ app.get('/workouts/:first', (req, res) => {
         res.json(response.data)
     }).catch((error)=>console.error(error))
 });
-
-app.post('/schedule', (req, res) =>{
-    console.log(req.body);
-})
 
 app.listen(PORT, ()=>console.log(`server is running on port ${PORT}`));

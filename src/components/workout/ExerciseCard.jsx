@@ -1,25 +1,20 @@
 import React from "react";
 
-const style = {width: "30%"}
-
-
-
-
 function ExerciseCard(props){ 
     return( 
-        <div className="card" style={style}>
+        <div className="card workout-card">
             <h5 className="card-header">
                 {props.info.name} 
-                <input className="form-check-input" type="checkbox" value="" style={{float: "right", marginLeft:"1%"}}/>
-                <label className="form-check-label" htmlFor="flexCheckDefault" style={{float: "right"}}>
+                <input className="form-check-input workout-card-right" type="checkbox" value="" />
+                <label className="form-check-label workout-card-right" htmlFor="flexCheckDefault">
                     Finished
                 </label>
             </h5>
             
             <div className="card-body">
-                <p>{props.info.muscle}</p>
-                <p className="card-text">X sets of Y reps</p>
-                <button className="btn btn-info" style={{float: "right"}} onClick={props.toggleNeedInfo}>Info</button>
+                <p>{props.info.muscle.replace("_", " ")}</p>
+                <p className="card-text">3-6 sets of 6-12 reps</p>
+                <button className="btn btn-info workout-card-right" onClick={props.toggleNeedInfo}>Info</button>
             </div>
         </div>)
 }

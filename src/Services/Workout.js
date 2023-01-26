@@ -1,13 +1,9 @@
-import { settingsValues } from "../components/Settings/Settings";
 import axios from "axios";
-
-//https://www.youtube.com/watch?v=FcwfjMebjTU
-
+import schedule from "./Settings";
 
 //get current day
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const day = weekday[new Date().getUTCDay()];
-// const day = "Monday";
 
 const fetchTodaysWorkouts = async () => {
     if(day==="Saturday" || day==="Sunday"){
@@ -37,21 +33,20 @@ const fetchTodaysWorkouts = async () => {
             console.log("localData is null, fetching data")
             var toMix = []
             //make three api calls to get workouts for three different muscles
-                //add check if settingsValues.muscles[day].# is -
             const firstWorkouts = await axios.get(
-                'http://localhost:8000/workouts/'+settingsValues.muscles[day].One
+                'http://localhost:8000/workouts/'+schedule[day].One
             )
+            console.log("firsCallResult", firstWorkouts);
             const secondWorkouts = await axios.get(
-                'http://localhost:8000/workouts/'+settingsValues.muscles[day].Two
+                'http://localhost:8000/workouts/'+schedule[day].Two
             )
             const thirdWorkouts = await axios.get(
-                'http://localhost:8000/workouts/'+settingsValues.muscles[day].Three
+                'http://localhost:8000/workouts/'+schedule[day].Three
             )
             //add results from api calls to toMix array
-                //add check for -
             toMix.push(firstWorkouts.data, secondWorkouts.data, thirdWorkouts.data);
             //return a random assortment of workouts from the arrays in toMix
-                //if - then you will get less than nine workouts...
+            console.log("toMix", toMix);
             return mixArrays(toMix);
         }
     }

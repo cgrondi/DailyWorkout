@@ -1,22 +1,29 @@
-import axios from "axios";
-
-const fetchSettings = async ()=> {
-    if(window.localStorage !== undefined){
-        console.log("Settings: Check one good")
-        // window.localStorage.removeItem("WorkoutSettings")  
-        //try to get today's data
-        const localData = window.localStorage.getItem("WorkoutSettings");
-        //if data is not null
-        if(localData !== null){
-            console.log("localData not null: fetching settings from localStorage")
-            //parse data from localstorage and return it as a promise
-            return JSON.parse(localData);
-        }
-        else{
-            console.log("local data is null")
-            return null;
-        }
+const schedule = {
+    Monday: {
+        One: "biceps",
+        Two: "chest",
+        Three: "triceps"
+    },
+    Teusday: {
+        One: "abdominals",
+        Two: "abductors",
+        Three: "lats"
+    },
+    Wednesday: {
+        One: "calves",
+        Two: "glutes",
+        Three: "quadriceps"
+    },
+    Thursday: {
+        One: "lower_back", 
+        Two: "middle_back", 
+        Three: "neck"
+    },
+    Friday: {
+        One: "forearms",
+        Two: "hamstrings",
+        Three: "traps"
     }
 }
 
-export default fetchSettings;
+export default schedule;

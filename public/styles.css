@@ -1,0 +1,15 @@
+footer p {
+    color: #ccc;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.workout-card{
+    width: 30%
+}
+
+.workout-card-right{
+    float: right;
+    margin-left: 1%;
+}
