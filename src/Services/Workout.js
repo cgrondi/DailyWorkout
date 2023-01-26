@@ -5,7 +5,6 @@ import axios from "axios";
 
 
 //get current day
-    //Need to add logic for if saturday or sunday...
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const day = weekday[new Date().getUTCDay()];
 // const day = "Monday";

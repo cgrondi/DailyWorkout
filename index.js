@@ -1,9 +1,7 @@
-// import { settingsValues } from './src/components/Settings/Settings';
 const PORT = 8000;
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
-const { response } = require('express');
 require('dotenv').config();
 
 const app = express();

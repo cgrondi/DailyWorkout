@@ -20,7 +20,7 @@ function Workout(){
             // const day = "Monday"
             //check if local storage has an item under today's name, if not
             if(window.localStorage.getItem(day+'Workout')==null){
-                console.log("Didn' have data yet. saving...")
+                console.log("Didn't have that workout data yet. saving...")
                 //save the strigified data in local storage
                 window.localStorage.setItem(day+"Workout", JSON.stringify(data));
             }
